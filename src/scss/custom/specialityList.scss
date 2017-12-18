@@ -1,0 +1,49 @@
+.specilityList {
+  padding: 40px;
+  margin-top: 50px;
+
+  table {
+    min-width: 100%;
+    padding: 40px;
+    border: 1px solid #c3c3c3;
+    margin-top: 20px;
+
+
+    tr {
+
+      th {
+        background-color: rgb(73, 166, 233);
+        padding: 10px;
+        color: #fff;
+        text-align: center;
+      }
+    }
+
+    tr {
+      border: 1px solid #c3c3c3;
+
+      td {
+        padding: 20px;
+        text-align: center;
+      }
+      &:hover{
+        background-color: #e7faff;
+        cursor: pointer;
+      }
+    }
+  }
+.btns{
+  float: right;
+
+  .btn {
+    padding: 0;
+    background-color: #fff;
+    margin: 2px;
+  }
+}
+
+  .active{
+    background-color: rgb(97, 215, 246);
+
+  }
+}

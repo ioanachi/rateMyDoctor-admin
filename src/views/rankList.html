@@ -1,0 +1,26 @@
+<div class="rankList" ng-controller="RankListController as rlctrl">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <md-button class="md-raised" goto-path="/rank/add">Insert Rank</md-button>
+        <div class="btnsR" ng-show="rlctrl.rowIndex != -1">
+          <md-button class="md-raised md-primary" ng-click="rlctrl.updateRank()">Edit</md-button>
+          <md-button class="md-raised md-warn" ng-click="showConfirm($event)">Delete</md-button>
+        </div>
+
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+
+          </tr>
+          <tr ng-click="rlctrl.selectedRow($index)" ng-repeat="item in rlctrl.rankObj" ng-class="{active:$index==rlctrl.rowIndex}">
+            <td>{{item.Name}}</td>
+            <td>{{item.Description}}</td>
+          </tr>
+        </table>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<!-- <img src="src/img/loginphoto.jpg" alt="" class="loginimg"> -->
+<div class="backImg">
+
+
+  <form class="frontlogin" name="formLogin" ng-controller="LogvalidateController as logvctrl" novalidate>
+
+    <md-input-container class="md-block" flex-gt-sm>
+      <label>User</label>
+      <input  required name="user" ng-model="logvctrl.username" required >
+    </md-input-container>
+    <div ng-show="formLogin.user.$invalid && formLogin.user.$dirty">This field is required</div>
+
+  
+
+    <md-input-container class="md-block" flex-gt-sm>
+      <label>Password</label>
+      <input type="password" name="pass" ng-model="logvctrl.password" required>
+    </md-input-container>
+    <div ng-show="formLogin.pass.$invalid && formLogin.pass.$dirty">This field is required</div>
+
+
+
+
+    <button type="button" name="button" ng-click="logvctrl.validateLogin(formLogin)">Log In</button>
+    <p class="other" goto-path="/register"><span>Register</span></p>
+  </form>
+</div>

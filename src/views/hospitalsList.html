@@ -1,0 +1,38 @@
+<div class="hospitalList" ng-controller="HospitalsListController as hlctrl">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3>Hospitals</h3>
+
+        <md-button class="md-raised" goto-path="/hospitals/add" >Insert Hospital</md-button>
+        <div class="btns" ng-show="hlctrl.rowIndex != -1" >
+        <md-button class="md-raised md-primary" ng-click="hlctrl.updateHosp()" >Edit</md-button>
+
+
+    <md-button class="md-raised md-warn" ng-click="showConfirm($event)">Delete</md-button>
+        </div>
+
+        <table >
+          <tr>
+            <th>Picture</th>
+            <th>Name</th>
+            <th>Adress</th>
+            <th>Description</th>
+            <th>Number of doctors</th>
+            <th>Number of specialities</th>
+
+          </tr>
+          <tr ng-click="hlctrl.selectedRow($index)" ng-repeat="item in hlctrl.hospitalsObj" ng-class="{active:$index==hlctrl.rowIndex}" >
+            <td>{{item.Picture}}</td>
+            <td>{{item.Name}}</td>
+            <td>{{item.Adress}}</td>
+            <td>{{item.Description}}</td>
+            <td>{{item.doctorsNr}}</td>
+            <td>{{item.SpecialityNr}}</td>
+          </tr>
+        </table>
+
+      </div>
+    </div>
+  </div>
+</div>

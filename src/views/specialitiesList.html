@@ -1,0 +1,31 @@
+<div class="specilityList" ng-controller="SpecialitiesListController as slctrl">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3>Specialities</h3>
+
+        <md-button class="md-raised" goto-path="/specialities/add" >Insert Speciality</md-button>
+        <div class="btns" ng-show="slctrl.rowIndex != -1" >
+        <md-button class="md-raised md-primary" ng-click="slctrl.updateSpec()" >Edit</md-button>
+
+
+    <md-button class="md-raised md-warn" ng-click="showConfirm($event)">Delete</md-button>
+        </div>
+
+        <table >
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Number of doctors</th>
+          </tr>
+          <tr ng-click="slctrl.selectedRow($index)" ng-repeat="item in specialitiesObj" ng-class="{active:$index==slctrl.rowIndex}" >
+            <td>{{item.Name}}</td>
+            <td>{{item.Description}}</td>
+            <td>{{item.DoctorsNr}}</td>
+          </tr>
+        </table>
+
+      </div>
+    </div>
+  </div>
+</div>

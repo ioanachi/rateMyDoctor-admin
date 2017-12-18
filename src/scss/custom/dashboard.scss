@@ -1,0 +1,57 @@
+.classes {
+  min-width: 100%;
+  min-height: 680px;
+  top: 50%;
+  border: 1px solid rgb(187, 236, 246);
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  display: flex;
+  left: 50%;
+
+  .common {
+    min-width: 300px;
+    min-height: 300px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+  }
+
+  .hospitals {
+    background-image: url("/src/img/hospitalDash.jpg");
+  }
+
+  .specialities {
+    background-image: url("/src/img/specialityDash.jpg");
+  }
+
+  .doctors {
+    background-image: url("/src/img/drDash.jpg");
+  }
+}
+
+.transparent {
+  min-width: 100%;
+  min-height: 300px;
+  background-color: rgba(0, 0, 0,0.4);
+  justify-content: center;
+  display: flex;
+  align-items: center;
+
+  p {
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  &:hover {
+    background-color: rgba(0, 0, 0,0.0);
+    cursor: pointer;
+
+    p {
+      background-color: rgba(0, 0, 0,0.5);
+    }
+  }
+}

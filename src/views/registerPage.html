@@ -1,0 +1,34 @@
+<!-- <img src="src/img/loginphoto.jpg" alt="" class="loginimg"> -->
+<div class="ImgReg">
+  <form class="frontregister" ng-controller="validationRegisterController as vrctrl" name="exampleForm" novalidate>
+    <md-input-container class="md-block" flex-gt-sm>
+      <label>User Name</label>
+      <input required name="userName" ng-model="vrctrl.username">
+    </md-input-container>
+    <div ng-show="exampleForm.userName.$invalid && exampleForm.userName.$dirty">This field is required</div>
+
+
+
+    <md-input-container class="md-block" flex-gt-sm>
+      <label>Email</label>
+      <input type="email" name="userEmail" ng-model="vrctrl.email" required>
+    </md-input-container>
+    <div ng-show="exampleForm.userEmail.$invalid && exampleForm.userEmail.$dirty">Your email address is invalid</div>
+
+
+    <md-input-container class="md-block" flex-gt-sm>
+      <label>Password</label>
+      <input type="password" id="pw1" name="pw1" ng-model="vrctrl.pw1" ng-required="">
+    </md-input-container>
+    <md-input-container class="md-block" flex-gt-sm>
+      <label>Password verification</label>
+      <input type="password" id="pw2" name="pw2" ng-model="pw2" ng-required="" pw-check="pw1">
+    </md-input-container>
+    <div class="msg-error" ng-show="exampleForm.pw2.$error.pwmatch">
+      Passwords don't match.
+    </div>
+    <button type="button" name="button" ng-click="vrctrl.validateForm(exampleForm)">Submit</button>
+    <p class="other" goto-path="/login"><span>Back to Log In page</span></p>
+
+  </form>
+</div>

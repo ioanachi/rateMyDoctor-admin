@@ -1,0 +1,50 @@
+<div class="doctorAdd" ng-controller="AdddoctorController as adctrl">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+
+        <md-button class="md-raised buttoninsertDr" goto-path="/doctors">Back to the list</md-button>
+
+        <div class="row addDr">
+          <div class="col-sm-12">
+            <div class="col-sm-6" inputDr>
+
+              <label for="doctorName"></label>Doctor Name:
+              <input type="text" name="doctorName" ng-model="doctorName"></br>
+              <label for=""></label>Doctor's Speciality:
+
+              <select ng-model="idSpeciality" ng-options="item.sID as item.Name for item in adctrl.specialityDr">
+              </select></br>
+              <label for=""></label>Hospital:
+
+              <select ng-model="idHospital" ng-options="item2.hID as item2.Name for item2 in adctrl.hospitalDr" name="">
+              </select></br>
+              <label for=""></label>Doctor's Rank:
+
+              <select ng-model="idRank" ng-options="item3.ID as item3.Name for item3 in adctrl.rankDr" name="">
+              </select></br>
+
+              <label for="doctorPrivate"></label>Private Practice:
+              <input type="text" name="doctorPrivate" value="" ng-model="doctorPrivate" placeholder="Private practice"></br>
+
+              <label for="doctorDescription"></label>Doctor's CV
+              <textarea ng-model="doctorDescription" name="doctorDescription" placeholder="Add CV or Description"></textarea></br>
+
+              <label for="doctorPicture"></label> Photo:
+              <input type="text" name="doctorPicture" value="" ng-model="doctorPicture" placeholder="Photo (introduce URL)">
+            </div>
+
+            <div class="col-sm-6 textContDr">
+
+
+              <p>
+                <span>Doctor :</span><em> {{doctorName}}</em></br>
+              </p>
+            </div>
+          </div>
+          <md-button class="md-raised md-primary addbtnDr" ng-click="adctrl.addEditDr()">{{adctrl.doctorBtn}}</md-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

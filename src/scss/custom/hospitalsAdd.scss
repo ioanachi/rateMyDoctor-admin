@@ -1,0 +1,57 @@
+.hospitalAdd {
+  color: rgb(1, 105, 149);
+
+  .addH {
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #c3c3c3;
+    min-height: 250px;
+  }
+
+  .inputHosp {
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  input {
+    align-self: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  .textContHosp {
+    top: 5px;
+    margin: 0;
+    padding: 0;
+    float: right;
+    min-width: 50%;
+    min-height: 80px;
+
+    p {
+      float: left;
+      margin-top: 20px;
+
+      span {
+        font-weight: 600;
+        min-width: 50%;
+        overflow: scroll;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .buttoninsertH {
+    margin-top: 50px;
+    margin-left: 5px;
+    padding: 5px;
+  }
+}
+
+.addbtnH {
+  left: 2px;
+  bottom: 9px;
+  margin-top: 100px;
+}

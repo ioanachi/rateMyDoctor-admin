@@ -1,0 +1,36 @@
+<div class="doctorsList" ng-controller="FrontDoctorsListController as fdlctrl">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3>Doctors</h3>
+
+        <table>
+          <tr>
+            <th>Picture</th>
+            <th>Name</th>
+            <th>Rank</th>
+            <th>Speciality</th>
+            <th>Hospital</th>
+            <th>Private Practice</th>
+            <th>Description</th>
+            <th>Rating</th>
+            <th>Reviews</th>
+          </tr>
+          <tr ng-click="fdlctrl.selectedRow($index)" ng-repeat="item in fdlctrl.frontdoctorsObj" ng-class="{active:$index==fdlctrl.rowIndex}">
+            <td>{{item.Picture}}</td>
+            <td>{{item.Name}}</td>
+            <td>{{item.RankName}}</td>
+            <td>{{item.SpecialityName}}</td>
+            <td>{{item.HospitalName}}</td>
+            <td>{{item.PrivatePractice}}</td>
+            <td>{{item.CV}}</td>
+            <th>Rating</th>
+            <th>Reviews</th>
+
+          </tr>
+        </table>
+
+      </div>
+    </div>
+  </div>
+</div>

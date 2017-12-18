@@ -1,0 +1,33 @@
+<div class="specialAdd" ng-controller="AddspecialityController as asctrl">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+
+        <md-button class="md-raised buttoninsert" goto-path="/specialities">Back to the list</md-button>
+
+        <div class="row add">
+          <div class="col-sm-12">
+
+
+            <div class="col-sm-6">
+              <label for="addSpeciality"></label>Speciality Name:
+              <input type="text" name="specialityAdded" ng-model="specialityAdded" id="specialityAdded"></br>
+              <label for="addSpecialDescription"></label>Speciality Description:
+              <textarea name="addSpecialDescription" ng-model="addSpecialDescription" id="specialityAdded"></textarea>
+            </div>
+
+            <div class="col-sm-6 textCont">
+
+
+              <p>
+                <span>Name :</span><em> {{specialityAdded}}</em></br>
+                <span>Description  :</span><em> {{addSpecialDescription}}</em>
+              </p>
+            </div>
+          </div>
+          <md-button class="md-raised md-primary addbtn" ng-click="asctrl.addEditspec()">{{asctrl.specialBtn}}</md-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+.menu {
+  // margin-top: 1%;
+  padding: 0;
+  margin: 0;
+
+  .menuUl {
+    margin-top: 40px;
+    display: block;
+    padding: 0 0 50px 0;
+    list-style: none;
+    display: flex;
+
+    li {
+
+      color: rgb(26, 5, 198);
+      float: left;
+      cursor: pointer;
+      padding: 10px;
+      margin: 5px;
+      font-size: 15px;
+      text-align: left;
+
+      &:hover {
+        text-align: left;
+        border-bottom: 1px solid rgb(30, 210, 235);
+
+
+      }
+    }
+    .logoutbtn{
+      float: right;
+    }
+  }
+
+}

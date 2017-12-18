@@ -1,0 +1,51 @@
+.backImg {
+  background-image: url("/src/img/loginphoto.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-width: 100%;
+  min-height: 100%;
+
+  .frontlogin {
+    background-color: rgba(255, 255, 255,0.9);
+    border: 1px solid #cccccc;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-width: 400px;
+    min-height: 300px;
+    padding: 20px;
+    // top: 50%;
+    // left: 50%;
+    button {
+      margin: 16px;
+      padding: 6px;
+      min-width: 184px;
+      min-height: 45px;
+      background-color: rgb(11, 116, 193);
+      border: 0;
+      color: white;
+    }
+
+    md-input-container {
+      text-align: left;
+    }
+  }
+
+  .other {
+    min-width: 5%;
+    min-height: 10px;
+    padding: 10px;
+
+    span:hover {
+      padding: 5px;
+      border-bottom: 1px solid rgb(159, 211, 237);
+      cursor: pointer;
+    }
+  }
+}

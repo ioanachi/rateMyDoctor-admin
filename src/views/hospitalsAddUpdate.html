@@ -1,0 +1,53 @@
+<div class="hospitalAdd" ng-controller="AddhospitalController as ahctrl">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+
+        <md-button class="md-raised buttoninsertH" goto-path="/hospitals">Back to the list</md-button>
+
+        <div class="row addH">
+          <div class="col-sm-12">
+            <div class="col-sm-6" inputHosp>
+
+              <label for="hospName"></label>Hospital Name:
+              <input type="text" name="hospName" ng-model="hospName"></br>
+
+
+
+              <label for="hospCounty"></label>Hospital Country:
+              <select class="" name="" ng-model="countrUnic" ng-options="item.idunic as item.tara for item in ahctrl.country2">
+              </select>
+              <label for="hospCountry"></label>Hospital County:
+              <input type="text" name="hospCounty" ng-model="hospCounty" value="" placeholder="County"></br>
+
+              <label for="hospCity"></label>Hospital City:
+              <input type="text" name="hospCity" value="" ng-model="hospCity" placeholder="City"></br>
+
+              <label for="hospStreet"></label>Hospital Adress:
+              <input type="text" name="hospStreet" value="" ng-model="hospStreet" placeholder=" Street"></br>
+
+              <label for="hospWebsite"></label>Hospital Website:
+              <input type="text" name="hospWebsite" value="" placeholder="Website" ng-model="hospWebsite"></br>
+
+              <label for="hospDescription"></label>Hospital Description:
+              <textarea name="hospDescription" ng-model="hospDescription" placeholder="description"></textarea></br>
+
+              <label for="hospPhoto"></label>Hospital Photo:
+              <input type="text" name="hospPhoto" value="" ng-model="hospPhoto" placeholder="Photo (introduce URL)">
+            </div>
+
+            <div class="col-sm-6 textContHosp">
+
+
+              <p>
+                <span>New Hospital :</span><em> {{hospName}}</em></br>
+                <span>Hospital Description  :</span><em> {{hospDescription}}</em>
+              </p>
+            </div>
+          </div>
+          <md-button class="md-raised md-primary addbtnH" ng-click="ahctrl.addEdithosp()">{{ahctrl.hospitalBtn}}</md-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="rankAdd" ng-controller="AddrankController as adrctrl" >
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <md-button class="md-raised buttoninsertR" goto-path="/rank">Back to the list</md-button>
+
+        <div class="row addR">
+          <div class="col-sm-12">
+            <div class="col-sm-6" inputDr>
+              <label for="rankName" ></label>Rank name:
+              <input type="text" name="rankName"  ng-model="rankName"></br>
+              <label for="rankDescription"></label>Description:
+              <textarea name="rankDescription"  ng-model="rankDescription" placeholder="Description"></textarea></br>
+            </div>
+            <div class="col-sm-6 textContR">
+              <p>
+                <span>Rank :</span><em> {{rankName}}</em></br>
+                <span>Description  :</span><em> {{rankDescription}}</em>
+              </p>
+            </div>
+          </div>
+          <md-button class="md-raised md-primary addbtnR" ng-click="adrctrl.addEditRank()">{{adrctrl.rankBtn}}</md-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

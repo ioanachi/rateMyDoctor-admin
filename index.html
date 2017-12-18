@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+  <meta charset="utf-8">
+  <title>Rate My Doctor Adminstrator</title>
+</head>
+
+<body ng-controller="MainController as mnctrl">
+
+
+
+  <div ng-show="mnctrl.user" ng-include="'./src/views/menu.html'"></div>
+  <!-- <div ng-include="'./src/views/menu.html'"></div> -->
+  <ng-view></ng-view>
+
+  <script src="./dist/commons.js"></script>
+  <script src="./dist/bundle.js"></script>
+</body>
+
+</html>
