@@ -78594,124 +78594,186 @@ _main.app.config(function ($routeProvider) {
   }).when("/register", {
     templateUrl: "src/views/registerPage.html"
   }).when("/dashboard", {
-    templateUrl: "src/views/dashboard.html"
-    // resolve:{
-    //   factoryResolve:function(generalService){
-    //     return generalService.isLogged();
-    //   },
-    // }
+    templateUrl: "src/views/dashboard.html",
+    resolve: {
+      check: function check($localStorage, $location) {
+        console.log();
+        if (typeof $localStorage.user != 'undefined') {
+          console.log('logged');
+        } else {
+          $location.path('/login');
+          console.log('not logged');
+        }
+      }
+    }
   }).when("/specialities", {
-    templateUrl: "src/views/specialitiesList.html"
-    // resolve:{
-    //   factoryResolve:function(generalService){
-    //     return generalService.isLogged();
-    //   },
-    // }
+    templateUrl: "src/views/specialitiesList.html",
+    resolve: {
+      check: function check($localStorage, $location) {
+        console.log();
+        if (typeof $localStorage.user != 'undefined') {
+          console.log('logged');
+        } else {
+          $location.path('/login');
+          console.log('not logged');
+        }
+      }
+    }
   }).when("/specialities/add", {
-    templateUrl: "src/views/specialitiesAddUpdate.html"
-    // resolve:{
-    //   factoryResolve:function(generalService){
-    //     return generalService.isLogged();
-    //   },
-    // }
+    templateUrl: "src/views/specialitiesAddUpdate.html",
+    resolve: {
+      check: function check($localStorage, $location) {
+        console.log();
+        if (typeof $localStorage.user != 'undefined') {
+          console.log('logged');
+        } else {
+          $location.path('/login');
+          console.log('not logged');
+        }
+      }
+    }
   }).when("/specialities/edit/:id", {
-    templateUrl: "src/views/specialitiesAddUpdate.html"
-    // resolve:{
-    //   factoryResolve:function(generalService){
-    //     return generalService.isLogged();
-    //   },
-    // }
+    templateUrl: "src/views/specialitiesAddUpdate.html",
+    resolve: {
+      check: function check($localStorage, $location) {
+        console.log();
+        if (typeof $localStorage.user != 'undefined') {
+          console.log('logged');
+        } else {
+          $location.path('/login');
+          console.log('not logged');
+        }
+      }
+    }
   }).when("/hospitals", {
-    templateUrl: "src/views/hospitalsList.html"
-    // resolve:{
-    //   factoryResolve:function(generalService){
-    //     return generalService.isLogged();
-    //   },
-    // }
+    templateUrl: "src/views/hospitalsList.html",
+    resolve: {
+      check: function check($localStorage, $location) {
+        console.log();
+        if (typeof $localStorage.user != 'undefined') {
+          console.log('logged');
+        } else {
+          $location.path('/login');
+          console.log('not logged');
+        }
+      }
+    }
   }).when("/hospitals/add", {
-    templateUrl: "src/views/hospitalsAddUpdate.html"
-    // resolve:{
-    //   factoryResolve:function(generalService){
-    //     return generalService.isLogged();
-    //   },
-    // }
+    templateUrl: "src/views/hospitalsAddUpdate.html",
+    resolve: {
+      check: function check($localStorage, $location) {
+        console.log();
+        if (typeof $localStorage.user != 'undefined') {
+          console.log('logged');
+        } else {
+          $location.path('/login');
+          console.log('not logged');
+        }
+      }
+    }
   }).when("/hospitals/edit/:id", {
-    templateUrl: "src/views/hospitalsAddUpdate.html"
-    // resolve:{
-    //   factoryResolve:function(generalService){
-    //     return generalService.isLogged();
-    //   },
-    // }
+    templateUrl: "src/views/hospitalsAddUpdate.html",
+    resolve: {
+      check: function check($localStorage, $location) {
+        console.log();
+        if (typeof $localStorage.user != 'undefined') {
+          console.log('logged');
+        } else {
+          $location.path('/login');
+          console.log('not logged');
+        }
+      }
+    }
   }).when("/doctors", {
-    templateUrl: "src/views/doctorsList.html"
-    // resolve:{
-    //   factoryResolve:function(generalService){
-    //     return generalService.isLogged();
-    //   },
-    // }
+    templateUrl: "src/views/doctorsList.html",
+    resolve: {
+      check: function check($localStorage, $location) {
+        console.log();
+        if (typeof $localStorage.user != 'undefined') {
+          console.log('logged');
+        } else {
+          $location.path('/login');
+          console.log('not logged');
+        }
+      }
+    }
   }).when("/doctors/add", {
-    templateUrl: "src/views/doctorsAddUpdate.html"
-    // resolve:{
-    //   factoryResolve:function(generalService){
-    //     return generalService.isLogged();
-    //   },
-    // }
+    templateUrl: "src/views/doctorsAddUpdate.html",
+    resolve: {
+      check: function check($localStorage, $location) {
+        console.log();
+        if (typeof $localStorage.user != 'undefined') {
+          console.log('logged');
+        } else {
+          $location.path('/login');
+          console.log('not logged');
+        }
+      }
+    }
   }).when("/doctors/edit/:id", {
-    templateUrl: "src/views/doctorsAddUpdate.html"
-    // resolve:{
-    //   factoryResolve:function(generalService){
-    //     return generalService.isLogged();
-    //   },
-    // }
+    templateUrl: "src/views/doctorsAddUpdate.html",
+    resolve: {
+      check: function check($localStorage, $location) {
+        console.log();
+        if (typeof $localStorage.user != 'undefined') {
+          console.log('logged');
+        } else {
+          $location.path('/login');
+          console.log('not logged');
+        }
+      }
+    }
   }).when("/rank", {
-    templateUrl: "src/views/rankList.html"
-    // resolve:{
-    //   factoryResolve:function(generalService){
-    //     return generalService.isLogged();
-    //   },
-    // }
+    templateUrl: "src/views/rankList.html",
+    resolve: {
+      check: function check($localStorage, $location) {
+        console.log();
+        if (typeof $localStorage.user != 'undefined') {
+          console.log('logged');
+        } else {
+          $location.path('/login');
+          console.log('not logged');
+        }
+      }
+    }
   }).when("/rank/add", {
-    templateUrl: "src/views/rankAddUpdate.html"
-    // resolve:{
-    //   factoryResolve:function(generalService){
-    //     return generalService.isLogged();
-    //   },
-    // }
+    templateUrl: "src/views/rankAddUpdate.html",
+    resolve: {
+      check: function check($localStorage, $location) {
+        console.log();
+        if (typeof $localStorage.user != 'undefined') {
+          console.log('logged');
+        } else {
+          $location.path('/login');
+          console.log('not logged');
+        }
+      }
+    }
   }).when("/rank/edit/:id", {
-    templateUrl: "src/views/rankAddUpdate.html"
-    // resolve:{
-    //   factoryResolve:function(generalService){
-    //     return generalService.isLogged();
-    //   },
-    // }
+    templateUrl: "src/views/rankAddUpdate.html",
+    resolve: {
+      check: function check($localStorage, $location) {
+        console.log();
+        if (typeof $localStorage.user != 'undefined') {
+          console.log('logged');
+        } else {
+          $location.path('/login');
+          console.log('not logged');
+        }
+      }
+    }
   }).when("/front", {
     templateUrl: "src/views/frontPage.html"
-    // resolve:{
-    //   factoryResolve:function(generalService){
-    //     return generalService.isLogged();
-    //   },
-    // }
+
   }).when("/frontHospitalsList", {
     templateUrl: "src/views/frontHospitalsList.html"
-    // resolve:{
-    //   factoryResolve:function(generalService){
-    //     return generalService.isLogged();
-    //   },
-    // }
+
   }).when("/frontSpecialitiesList", {
     templateUrl: "src/views/frontSpecialitiesList.html"
-    // resolve:{
-    //   factoryResolve:function(generalService){
-    //     return generalService.isLogged();
-    //   },
-    // }
+
   }).when("/frontDoctorsList", {
     templateUrl: "src/views/frontDoctorsList.html"
-    // resolve:{
-    //   factoryResolve:function(generalService){
-    //     return generalService.isLogged();
-    //   },
-    // }
+
   }).when('/404', {
     templateUrl: "src/views/404.html"
   }).otherwise("/404");
@@ -78936,7 +78998,6 @@ var _main = __webpack_require__(0);
 
 _main.app.controller("LogvalidateController", ['Notification', "$http", "generalService", "httpPostService", "$location", "$localStorage", "$scope", function (Notification, $http, generalService, httpPostService, $location, $localStorage, $scope) {
   var tThis = this;
-
   tThis.validateLogin = function (formName) {
     if (formName.$valid) {
       var _data = {
@@ -78950,6 +79011,7 @@ _main.app.controller("LogvalidateController", ['Notification', "$http", "general
           username: tThis.username,
           token: data.token
         };
+        console.log($localStorage.user);
         $scope.userData($localStorage.user);
 
         $location.path('/dashboard');

@@ -1,7 +1,8 @@
 import {
   app
 } from '../main.js';
-app.config(function($routeProvider) {
+app.config(function($routeProvider, ) {
+
 
   $routeProvider
     .when("/", {
@@ -15,139 +16,214 @@ app.config(function($routeProvider) {
     })
     .when("/dashboard", {
       templateUrl: "src/views/dashboard.html",
-      // resolve:{
-      //   factoryResolve:function(generalService){
-      //     return generalService.isLogged();
-      //   },
-      // }
+      resolve: {
+        check: function($localStorage,$location) {
+          console.log();
+          if (typeof $localStorage.user != 'undefined') {
+            console.log('logged');
+          } else  {
+            $location.path('/login');
+            console.log('not logged');
+
+          }
+        }
+      }
     })
     .when("/specialities", {
       templateUrl: "src/views/specialitiesList.html",
-      // resolve:{
-      //   factoryResolve:function(generalService){
-      //     return generalService.isLogged();
-      //   },
-      // }
+      resolve: {
+        check: function($localStorage,$location) {
+          console.log();
+          if (typeof $localStorage.user != 'undefined') {
+            console.log('logged');
+          } else  {
+            $location.path('/login');
+            console.log('not logged');
+
+          }
+        }
+      }
     })
     .when("/specialities/add", {
       templateUrl: "src/views/specialitiesAddUpdate.html",
-      // resolve:{
-      //   factoryResolve:function(generalService){
-      //     return generalService.isLogged();
-      //   },
-      // }
+      resolve: {
+        check: function($localStorage,$location) {
+          console.log();
+          if (typeof $localStorage.user != 'undefined') {
+            console.log('logged');
+          } else  {
+            $location.path('/login');
+            console.log('not logged');
+
+          }
+        }
+      }
     })
     .when("/specialities/edit/:id", {
       templateUrl: "src/views/specialitiesAddUpdate.html",
-      // resolve:{
-      //   factoryResolve:function(generalService){
-      //     return generalService.isLogged();
-      //   },
-      // }
+      resolve: {
+        check: function($localStorage,$location) {
+          console.log();
+          if (typeof $localStorage.user != 'undefined') {
+            console.log('logged');
+          } else  {
+            $location.path('/login');
+            console.log('not logged');
+
+          }
+        }
+      }
     })
     .when("/hospitals", {
       templateUrl: "src/views/hospitalsList.html",
-      // resolve:{
-      //   factoryResolve:function(generalService){
-      //     return generalService.isLogged();
-      //   },
-      // }
+      resolve: {
+        check: function($localStorage,$location) {
+          console.log();
+          if (typeof $localStorage.user != 'undefined') {
+            console.log('logged');
+          } else  {
+            $location.path('/login');
+            console.log('not logged');
+
+          }
+        }
+      }
     })
     .when("/hospitals/add", {
       templateUrl: "src/views/hospitalsAddUpdate.html",
-      // resolve:{
-      //   factoryResolve:function(generalService){
-      //     return generalService.isLogged();
-      //   },
-      // }
+      resolve: {
+        check: function($localStorage,$location) {
+          console.log();
+          if (typeof $localStorage.user != 'undefined') {
+            console.log('logged');
+          } else  {
+            $location.path('/login');
+            console.log('not logged');
+
+          }
+        }
+      }
     })
     .when("/hospitals/edit/:id", {
       templateUrl: "src/views/hospitalsAddUpdate.html",
-      // resolve:{
-      //   factoryResolve:function(generalService){
-      //     return generalService.isLogged();
-      //   },
-      // }
+      resolve: {
+        check: function($localStorage,$location) {
+          console.log();
+          if (typeof $localStorage.user != 'undefined') {
+            console.log('logged');
+          } else  {
+            $location.path('/login');
+            console.log('not logged');
+
+          }
+        }
+      }
     })
     .when("/doctors", {
       templateUrl: "src/views/doctorsList.html",
-      // resolve:{
-      //   factoryResolve:function(generalService){
-      //     return generalService.isLogged();
-      //   },
-      // }
+      resolve: {
+        check: function($localStorage,$location) {
+          console.log();
+          if (typeof $localStorage.user != 'undefined') {
+            console.log('logged');
+          } else  {
+            $location.path('/login');
+            console.log('not logged');
+
+          }
+        }
+      }
     })
     .when("/doctors/add", {
       templateUrl: "src/views/doctorsAddUpdate.html",
-      // resolve:{
-      //   factoryResolve:function(generalService){
-      //     return generalService.isLogged();
-      //   },
-      // }
+      resolve: {
+        check: function($localStorage,$location) {
+          console.log();
+          if (typeof $localStorage.user != 'undefined') {
+            console.log('logged');
+          } else  {
+            $location.path('/login');
+            console.log('not logged');
+
+          }
+        }
+      }
     })
     .when("/doctors/edit/:id", {
       templateUrl: "src/views/doctorsAddUpdate.html",
-      // resolve:{
-      //   factoryResolve:function(generalService){
-      //     return generalService.isLogged();
-      //   },
-      // }
+      resolve: {
+        check: function($localStorage,$location) {
+          console.log();
+          if (typeof $localStorage.user != 'undefined') {
+            console.log('logged');
+          } else  {
+            $location.path('/login');
+            console.log('not logged');
+
+          }
+        }
+      }
     })
     .when("/rank", {
       templateUrl: "src/views/rankList.html",
-      // resolve:{
-      //   factoryResolve:function(generalService){
-      //     return generalService.isLogged();
-      //   },
-      // }
+      resolve: {
+        check: function($localStorage,$location) {
+          console.log();
+          if (typeof $localStorage.user != 'undefined') {
+            console.log('logged');
+          } else  {
+            $location.path('/login');
+            console.log('not logged');
+
+          }
+        }
+      }
     })
     .when("/rank/add", {
       templateUrl: "src/views/rankAddUpdate.html",
-      // resolve:{
-      //   factoryResolve:function(generalService){
-      //     return generalService.isLogged();
-      //   },
-      // }
+      resolve: {
+        check: function($localStorage,$location) {
+          console.log();
+          if (typeof $localStorage.user != 'undefined') {
+            console.log('logged');
+          } else  {
+            $location.path('/login');
+            console.log('not logged');
+
+          }
+        }
+      }
     })
     .when("/rank/edit/:id", {
       templateUrl: "src/views/rankAddUpdate.html",
-      // resolve:{
-      //   factoryResolve:function(generalService){
-      //     return generalService.isLogged();
-      //   },
-      // }
+      resolve: {
+        check: function($localStorage,$location) {
+          console.log();
+          if (typeof $localStorage.user != 'undefined') {
+            console.log('logged');
+          } else  {
+            $location.path('/login');
+            console.log('not logged');
+
+          }
+        }
+      }
     })
     .when("/front", {
       templateUrl: "src/views/frontPage.html",
-      // resolve:{
-      //   factoryResolve:function(generalService){
-      //     return generalService.isLogged();
-      //   },
-      // }
+
     })
     .when("/frontHospitalsList", {
       templateUrl: "src/views/frontHospitalsList.html",
-      // resolve:{
-      //   factoryResolve:function(generalService){
-      //     return generalService.isLogged();
-      //   },
-      // }
+
     })
     .when("/frontSpecialitiesList", {
       templateUrl: "src/views/frontSpecialitiesList.html",
-      // resolve:{
-      //   factoryResolve:function(generalService){
-      //     return generalService.isLogged();
-      //   },
-      // }
+
     })
     .when("/frontDoctorsList", {
       templateUrl: "src/views/frontDoctorsList.html",
-      // resolve:{
-      //   factoryResolve:function(generalService){
-      //     return generalService.isLogged();
-      //   },
-      // }
+
     })
 
 

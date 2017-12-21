@@ -6,7 +6,6 @@ import {
 
 app.controller("LogvalidateController", ['Notification', "$http", "generalService", "httpPostService","$location", "$localStorage", "$scope", function(Notification, $http, generalService, httpPostService, $location, $localStorage, $scope) {
   var tThis = this;
-
   tThis.validateLogin = function(formName) {
     if (formName.$valid) {
       var _data = {
@@ -20,6 +19,7 @@ app.controller("LogvalidateController", ['Notification', "$http", "generalServic
             username: tThis.username,
             token: data.token,
           };
+          console.log ($localStorage.user);
           $scope.userData($localStorage.user);
 
 
