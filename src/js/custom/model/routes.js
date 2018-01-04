@@ -2,7 +2,7 @@ import {
   app
 } from '../main.js';
 app.config(function($routeProvider, ) {
-
+ 
 
   $routeProvider
     .when("/", {

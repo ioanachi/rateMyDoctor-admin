@@ -35,7 +35,7 @@ app.controller("DoctorsListController", ["$scope", 'httpGetService', "httpDelete
       tThis.doctorsObj.splice(tThis.rowIndex, 1);
       tThis.rowIndex = -1;
     }, function() {
-      $scope.status = 'You decided to keep this hospital.';
+      $scope.status = 'You decided to keep this doctor.';
     });
   };
 
